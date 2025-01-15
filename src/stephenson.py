@@ -48,7 +48,7 @@ class Stephenson(object):
 
     def getTimeFactor(self, current_date=None):
         if self.last_match is not None and current_date is not None:
-            time_difference = (current_date - self.last_match).datetime.days # Time passed
+            time_difference = (current_date - self.last_match).days  # Time passed
             time_factor = (time_difference / self.rp) # Scale to ratio of rating periods passed
         else:
             return None
