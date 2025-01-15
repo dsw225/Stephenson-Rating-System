@@ -26,6 +26,8 @@ player_one.updateVar(match_date)
 
 Where player one is an instance of a stephenson rating, and match_date is the current match date.
 
+###### To note: Because of the implementation of dynamic rating periods, you must adjust the rating period length in [stephenson.py](https://github.com/dsw225/Stephenson-Rating-System/blob/main/src/stephenson.py). In [Mark Glickmans paper](http://www.glicko.net/research/volleyball-FINAL.pdf) he used 3 months as an average rating period for The Stephenson System, but in the [Glicko paper](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/glicko.pdf) Stephenson is based off of, the assumption is a rating period of two months. By default the rating period is set to 60 days, however I recommend not exceeding any amount in range 30-100.
+
 #### Step Two:
 
 <img src="https://github.com/dsw225/Stephenson-Rating-System/blob/main/imgs/Step2.png?raw=true" alt="alt text" width="550">
@@ -41,10 +43,10 @@ Where player_one and player_two are instances of a stephenson ratings, and match
 When updating two players at once it is important to remember that the players rating will change so you must create a clone of the rating before it is updated for another player:
 
 ```python
-   player_one_clone = copy.deepcopy(player_one)
+player_one_clone = copy.deepcopy(player_one)
 
-   player_one.newVarRating(player_two, match_score, 1) #pone is 1 for home team - since default gamma is 0 this is irrelevant
-   player_two.newVarRating(player_one_clone, (1 - match_score), 0) 
+player_one.newVarRating(player_two, match_score, 1) #pone is 1 for home team - since default gamma is 0 this is irrelevant
+player_two.newVarRating(player_one_clone, (1 - match_score), 0) 
 ```
 
 #### Predictions
