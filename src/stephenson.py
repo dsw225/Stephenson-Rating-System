@@ -57,6 +57,7 @@ class Stephenson(object):
 
     def updateVar(self, current_date=None):
         t = self.getTimeFactor(current_date)
+        self.last_match = current_date if current_date is not None else self.last_match
         self.sigma = min(math.sqrt(self.sigma + (self.cval * t)), self.rdmax) if t is not None else self.sigma
 
     def getKVal(self, opponent_rating):
