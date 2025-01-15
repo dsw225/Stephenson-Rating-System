@@ -6,7 +6,7 @@ This idea stemmed from reading a paper from Mark Glickman comparing Elo, Glicko,
 
 Compared to the [R implentation by Alec Stephenson and Jeff Sonas found here,](https://cran.r-project.org/web/packages/PlayerRatings/index.html) there are a few slight differences. My specific application of this rating system doesn't have an average period between games, so I adjusted the t factor which is usually the number of periods since the player last competed. However in this implementation the t factor is a ratio of (days since last competed) / (time period). While this is different it allows for an easier application of irregular playing rates. Beyond that this application differs as it only computes individual ratings and scores and does not have any methods to parse an entire dataset, however one could do so easily as shown in the test files.
 
-In the docs you can find ChessRatings.pdf which explains how the Stephenson System works, steph.Rd which explains base arguments, glicko.pdf which the stephenson system is built off of, AFLRatings.pdf which is helpful in understanding the Stephenson System, PlayerRatings.pdf which is the R documentation of the Stephenson System among others, and finally Glickmans volleyball paper mentioned earlier.
+In the docs you can find [ChessRatings.pdf](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/ChessRatings.pdf) which explains how the Stephenson System works, [steph.Rd](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/steph.Rd) which explains base arguments, [glicko.pdf](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/glicko.pdf) which the stephenson system is built off of, [AFLRatings.pdf](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/AFLRatings.pdf) which is helpful in understanding the Stephenson System, [PlayerRatings.pdf](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/PlayerRatings.pdf) which is the R documentation of the Stephenson System among others, and finally [Glickmans volleyball paper](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/volleyball-FINAL.pdf) mentioned earlier.
 
 The data file included is the aflodds data included in the R package to make sure that the results of each method worked the same.
 
@@ -16,7 +16,7 @@ The steps to compute ratings are as follows:
 
 #### Step One:
 
-Img here
+<img src="https://github.com/dsw225/Stephenson-Rating-System/blob/main/imgs/Step1.png?raw=true" alt="alt text" width="550">
 
 Which we can accomplish using:
 
@@ -28,7 +28,7 @@ Where player one is an instance of a stephenson rating, and match_date is the cu
 
 #### Step Two:
 
-Img here
+<img src="https://github.com/dsw225/Stephenson-Rating-System/blob/main/imgs/Step2.png?raw=true" alt="alt text" width="550">
 
 Which we can accomplish using:
 
@@ -49,7 +49,7 @@ When updating two players at once it is important to remember that the players r
 
 #### Predictions
 
-Img here
+<img src="https://github.com/dsw225/Stephenson-Rating-System/blob/main/imgs/Prediction.png?raw=true" alt="alt text" width="550">
 
 To get a prediction score we can accomplish this by:
 
@@ -63,7 +63,7 @@ Where player_one and player_two are instances of a stephenson ratings, and predi
 
 This python library is based off of the R library by [Alec Stephenson and Jeff Sonas](https://cran.r-project.org/web/packages/PlayerRatings/index.html), so the following also apply to this library:
 
-img here
+<img src="https://github.com/dsw225/Stephenson-Rating-System/blob/main/imgs/RFunction.png?raw=true" alt="alt text" width="550">
 
 ## Contributing
 
