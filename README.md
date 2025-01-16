@@ -26,7 +26,7 @@ player_one.updateVar(match_date)
 
 Where player one is an instance of a stephenson rating, and match_date is the current match date.
 
-###### To note: Because of the implementation of dynamic rating periods, you must adjust the rating period length in [stephenson.py](https://github.com/dsw225/Stephenson-Rating-System/blob/main/src/stephenson.py). In [Mark Glickmans paper](http://www.glicko.net/research/volleyball-FINAL.pdf) he used 3 months as an average rating period for The Stephenson System, but in the [Glicko paper](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/glicko.pdf) Stephenson is based off of, the assumption is a rating period of two months. By default the rating period is set to 60 days, however I recommend not exceeding any amount in range 30-100.
+###### To note: Because of the implementation of dynamic rating periods, you must adjust the rating period length in [stephenson.py](https://github.com/dsw225/Stephenson-Rating-System/blob/main/src/stephenson.py). In [Mark Glickmans paper](http://www.glicko.net/research/volleyball-FINAL.pdf) he used 3 months as an average rating period for The Stephenson System, but in the [Glicko paper](https://github.com/dsw225/Stephenson-Rating-System/blob/main/docs/glicko.pdf) Stephenson is based off of, the assumption is a rating period of two months. By default the rating period is set to 30 days. I recommend setting this to a frequency where on average each player/team will/should play one game in the period -> IE. Every week in the nfl (7). Or like for Mark Glickmans paper, set it to a larger value for a large range of time.
 
 #### Step Two:
 

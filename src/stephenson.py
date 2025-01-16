@@ -19,7 +19,7 @@ SORT = True # Sort table by rating - unneeded
 RDMAX = 350.0 # Max variance
 
 # RP is not in R, however this model of stephenson is not on a week by week basis
-RATING_PERIOD = 60.0 # 90.0  # Days # http://www.glicko.net/research/volleyball-FINAL.pdf
+RATING_PERIOD = 30.0 # 90.0  # Days # http://www.glicko.net/research/volleyball-FINAL.pdf
 Q = math.log(10) / 400
 
 class Stephenson(object):
